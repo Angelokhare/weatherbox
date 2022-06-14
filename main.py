@@ -1,8 +1,8 @@
 from distutils.log import error
+import requests
 from requests.exceptions import ConnectionError
 from multiprocessing import connection
 from flask import *
-import requests
 import json
 import datetime
 import random
