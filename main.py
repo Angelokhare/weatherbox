@@ -14,6 +14,14 @@ kl= gh.strftime("%d")
 print(kl)
 
 @app.route("/", methods=("POST", "GET"))
+def welcome():
+   hj=datetime.datetime.now().strftime("%Y")
+   if request.method=="POST":
+      return redirect(url_for("home"))
+   return render_template("welcome.html", bot=hj)
+
+
+@app.route("/welcome", methods=("POST", "GET"))
 def home():
     if request.method=="POST":
       try:
@@ -77,9 +85,71 @@ def home():
     # http://l.yimg.com/a/i/us/we/2/36.gif
     # https://l.yimg.com/a/i/us/we/52/9.gif
    
-@app.route("/result")
+
+@app.route("/search", methods=("POST", "GET"))
 def search():
-    return render_template("search.html")
+    if request.method=="POST":
+      try:
+         name = request.form['name'].lower()
+         print(name)
+    #    try:
+         url = "https://yahoo-weather5.p.rapidapi.com/weather"
+
+         querystring = {"location":{name},"format":"json","u":"c"}
+
+         headers = {
+	"X-RapidAPI-Key": "3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54",
+	"X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com"
+}
+
+         response = requests.request("GET", url, headers=headers, params=querystring)
+         fas=response.json()
+      
+         if {"message":"Internal Server Error"}==fas:
+            print(response.text)
+            dass= random.randint(0,4)
+            print(dass)
+            hj=datetime.datetime.now().strftime("%Y")
+            return render_template("not.html", bot=hj, ran=dass)
+         print(response.text)
+         condition=fas["current_observation"]["condition"]
+         locationstate=fas["location"]
+    #    for fd in locationstate:
+    #        print(locationstate[fd])   
+         future=fas["forecasts"]
+         print(len(future))
+         kk= len(future)
+         hg=datetime.datetime.now().strftime("%B %d")
+         toon=datetime.datetime.now().strftime("%A")
+         hj=datetime.datetime.now().strftime("%Y")
+         hk=datetime.datetime.now().strftime("%B")
+         astronomy=fas["current_observation"]["astronomy"]
+         atmosphere=fas["current_observation"]["atmosphere"]
+         wind=fas["current_observation"]["wind"]
+    #    for gh in range(kk):   
+    #     print(future[gh]["day"])  
+    #    print(future[gh]["high"])  
+         print(f"{toon}{hg}")
+         df = datetime.date.today()
+         ky= len(future)+1
+         gf=[]
+         for gh in range(1, ky): 
+            hy= datetime.timedelta(days=gh)
+            gh=hy+ df
+            kl= gh.strftime("%d")
+            gf.append(str(kl))
+         print(gf)
+         return render_template("search.html", jh=kk, future=future, condition=condition, location=locationstate, date=toon, bot=hj, astronomy=astronomy, loc=hg, atmosphere=atmosphere, wind=wind, gv=gf, mm=hk)
+      except ConnectionError:
+         return redirect(url_for("home"))
+    #         # return("error")
+    hj=datetime.datetime.now().strftime("%Y")
+    return render_template("search.html",bot=hj)
+
+
+# @app.route("/result")
+# def search():
+#     return render_template("search.html")
     
    
 

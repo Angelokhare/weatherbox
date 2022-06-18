@@ -17,16 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
   <meta name= "viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-  <body>
-    <video autoplay muted loop playsinline id="myVideo"><source src="static/weatf.mp4" type="video/mp4"></video>
-    <video autoplay muted loop playsinline id="mydancing"><source src="static/wll.mp4" type="video/mp4"></video>
+  <body class="biggie">
+    <!-- <video autoplay muted loop playsinline id="myVideo"><source src="static/weatf.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline id="mydancing"><source src="static/wll.mp4" type="video/mp4"></video> -->
     <header>
-    <h1 class="heading">WEATHER <span class="pinky"> BOX</span></h1>
+    <h1 class="heading">WEATHER <span class="pinky">BOX</span></h1>
       <nav>
         <ul class="docking">
           <li><button class="btn btn-dark " id="ff" type="submit"><a class="link-line" href="#">Local News</a></button></li>
@@ -37,7 +38,7 @@
 
     <nav class="navbar navbar-light bg-dark p-2 text-dark bg-opacity-75 fixed-top" id="view">
   <div class="container-fluid">
-    <a class="navbar-brand" id="second-title" href="#">WEATHER <span class="pinky"> BOX</span></a>
+    <a class="navbar-brand" id="second-title" href="#">WEATHER  <span class="pinky"> BOX</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -75,23 +76,17 @@
   </div>
 </nav>
 </div>
-<form class="stable" method="POST" action="">
-  <input class="search fer" name="name" type="search" placeholder="Enter location" aria-label="Search">
-  <button class="btn btn-success"id= "ff" type="submit">Search</button>
-</form>
-      <!-- <h1 class="first word">Hello world!</h1> -->
-      <!-- <img class=picture src="static/angelo.png" alt=""> -->
-        <!-- <h2 class="topic word" id="unique-color" >I'm <span class=name>Angelokhare</span><br>Full-Stack Web Developer<br>Python - Javascript</h2> -->
-        <!-- <button class="btn btn-dark gh" id="ff" type="submit"><a class="link-line" href="mailto:angelobeckan794@gmail.com">Hire Me</a></button> -->
-       <footer>
-        <div>
-          <!-- <a href="https://api.whatsapp.com/send?phone=+2347081207165&text=I%20am%20interested%20in%20your%20projects.%20i%20am%20"><img class="social" src="static/whatsapp.png" alt=""></a>
-          <a href="https://twitter.com/angelokhare"><img class="social" src="static/twitter.png" alt=""></a>
-          <a href="https://www.linkedin.com/in/angelo-enamuehen-4b9210238/"><img class="social" src="static/linkedin.png" alt=""></a>
-          <a href="https://www.instagram.com/angelokhare/"><img class="social" src="static/instagram.png" alt=""></a> -->
-          <h5 class= "bottom">©<span><a class="bk" href="http://angelokhare.herokuapp.com">Copyright ANGELOKHARE {{bot}}<br>Design by: ANGELOKHARE</a></span></h5>
-        </div>
-        </footer>
+<div>
+    <img class="yeezy" src="static/weather.png" alt="">
+    <h1 class="welfir">Weather <span class="welsec">Box</span></h1>
+    <p class="param">On an everyday basis, many use weather forecasts to determine what to wear on a given day. Since outdoor activities are severely curtailed by heavy rain, snow and wind chill, forecasts can be used to plan activities around these events, and to plan ahead and survive them.</p>
+    <form action="" method="POST">
+    <button class="btn entering" type="submit"><a class="link-line" href={{url_for("home")}}>Get Started</a></button>
+    </form>
 
-  </body>
-</html>
+</div>
+<footer>
+    <div>
+      <h5 class= "bottom">©<span><a class="bk" href="http://angelokhare.herokuapp.com">Copyright ANGELOKHARE {{bot}}<br>Design by: ANGELOKHARE</a></span></h5>
+    </div>
+    </footer>
