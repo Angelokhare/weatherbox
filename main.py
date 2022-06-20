@@ -6,7 +6,6 @@ from flask import *
 import json
 import datetime
 import random
-from api import api
 app = Flask(__name__)
 df = datetime.date.today()
 hj= datetime.timedelta(days=1)
@@ -34,7 +33,7 @@ def home():
          querystring = {"location":{name},"format":"json","u":"c"}
 
          headers = {
-	"X-RapidAPI-Key": api,
+	"X-RapidAPI-Key": "3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54",
 	"X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com"
 }
 
