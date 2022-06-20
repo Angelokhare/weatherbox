@@ -6,7 +6,6 @@ from flask import *
 import json
 import datetime
 import random
-from api import api
 app = Flask(__name__)
 df = datetime.date.today()
 hj= datetime.timedelta(days=1)
