@@ -4,6 +4,56 @@ header {
   align-items: center;
   padding: 30px 7%;
 }
+.biggie {
+  background-image: linear-gradient(to bottom right, #38A2D7, #561139);
+  /* background-color: #007965; */
+  height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pinky{
+  color: #F47C7C;
+}
+.welfir{
+    color: #06283D;
+    font-family: 'Varela Round', sans-serif;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 6vw;
+}
+.welsec{
+  color: #F47C7C;
+  font-family: 'Varela Round', sans-serif;
+}
+/* .return{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%; }*/
+
+.param{
+  padding-top: 5%;
+  padding-left: 10%;
+  font-size: 4vw;
+  color: #06283D;
+  font-family: 'Varela Round', sans-serif;
+}
+.entering{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 5vw;
+  border-radius: 50px;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 5%;
+  background-color: #B20600;
+  margin-bottom: 20%;
+}
 .jap {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50px;
@@ -33,7 +83,21 @@ header {
   /* background-color: #ddd; */
   margin-right: 2%;
   border-radius: 50px;
+  margin-bottom: 20%;
 }
+
+.sliff{
+  margin-top: 10%;
+  margin-bottom: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #363062;
+  font-size: 3vw;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .d0{
 background-color: #363062;
 }
@@ -113,14 +177,21 @@ background-color: #363062;
   display: block;
 }
 .disimg {
-  width: 40%;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .sir {
   text-align: center;
   font-size: 5vw;
 }
 .street0 {
-  background-color: #007965;
+  background-image: linear-gradient(to bottom right, #fff, #158AB7);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* .street1 {
   background-color: #630000;
@@ -177,10 +248,14 @@ padding-left: 5%;;
 .esizes {
   width: 10%;
 }
+
+
 footer {
            position: fixed;
            padding: 0px 10px 0px 10px;
            bottom: 0;
+           border-top-left-radius: 100%;
+           border-top-right-radius: 100%;
            width: 100%;
            /* Height of the footer*/
            /* height: 100px; */
@@ -213,7 +288,8 @@ footer {
 }
 #ff {border-radius: 50px;
   /* border: 2px; */
-  padding: 0.5rem 1rem;}
+  padding: 0.5rem 1rem;
+}
 .docking li {
   display: inline-block;
   padding: 0px 30px;
@@ -314,10 +390,10 @@ font-size: 213%;
 .social {width: 5%;
 margin-left: 15%;}
 .social:hover{background-color: #F2F299;}
-/* copyright */
+/*copyright */
 .bottom {padding-top: 5%;
   /* color:#F4FCD9; */
-  color: black;
+ color: black;
   font-size: 110%;
 text-align: center;
 font-family: 'Caveat', cursive;}
@@ -375,7 +451,9 @@ body {margin:0px;
 .hot {margin:0px;
        padding:0px;box-sizing: border-box; width:100%; overflow-x: hidden; height:100vh;}} */
 
-@media only screen and(max-width: 500px) {.heading {font-size: 100%;}}
+@media only screen and(max-width: 350px) {
+  .fer {width: 60%;}
+}
 
 
 @media only screen and (max-width:1220px) {
@@ -415,12 +493,38 @@ body {margin:0px;
         header {visibility: hidden;}
        #view {display: block;}}
 
-/* @media only screen and (max-width:500px) { */
-       /* #second-title { */
-         /* font-size: 200%; */
-  /* }} */
+@media only screen and (min-width:750px) {
+        .differ{
+          padding-left: 10%;
+          padding-right: 10%;}
+        .welfir{
+            font-size: 5vw;
+          }
+          .param{
+            font-size: 3vw;
+          }
+          .entering{
+            font-size: 3vw;
+            padding: 3%;
+          }  
+        }
 
-/* @media only screen and (max-width:350px) { */
-         /* #second-title { */
-           /* font-size: 150%; */
-    /* }} */
+
+@media only screen and (min-width:650px) {
+  .entering{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+  }
+  }
+
+@media only screen and (max-width:650px) {
+  .shock {
+    margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* display: block; */
+  }
+    }
