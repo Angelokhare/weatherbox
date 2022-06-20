@@ -85,6 +85,19 @@ header {
   border-radius: 50px;
   margin-bottom: 20%;
 }
+
+.sliff{
+  margin-top: 10%;
+  margin-bottom: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #363062;
+  font-size: 3vw;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .d0{
 background-color: #363062;
 }
@@ -164,14 +177,21 @@ background-color: #363062;
   display: block;
 }
 .disimg {
-  width: 40%;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .sir {
   text-align: center;
   font-size: 5vw;
 }
 .street0 {
-  background-color: #007965;
+  background-image: linear-gradient(to bottom right, #fff, #158AB7);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* .street1 {
   background-color: #630000;
@@ -473,6 +493,23 @@ body {margin:0px;
         header {visibility: hidden;}
        #view {display: block;}}
 
+@media only screen and (min-width:750px) {
+        .differ{
+          padding-left: 10%;
+          padding-right: 10%;}
+        .welfir{
+            font-size: 5vw;
+          }
+          .param{
+            font-size: 3vw;
+          }
+          .entering{
+            font-size: 3vw;
+            padding: 3%;
+          }  
+        }
+
+
 @media only screen and (min-width:650px) {
   .entering{
     padding-left: 10%;
@@ -481,9 +518,13 @@ body {margin:0px;
     padding-bottom: 5%;
     margin-top: 5%;
   }
-  }}
+  }
 
-/* @media only screen and (max-width:350px) { */
-         /* #second-title { */
-           /* font-size: 150%; */
-    /* }} */
+@media only screen and (max-width:650px) {
+  .shock {
+    margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* display: block; */
+  }
+    }
