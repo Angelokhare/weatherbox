@@ -6,13 +6,12 @@ from flask import *
 import json
 import datetime
 import random
-from api import api
 app = Flask(__name__)
 df = datetime.date.today()
-hj= datetime.timedelta(days=1)
+hj= datetime.timedelta(days=10)
 gh=hj+ df
 kl= gh.strftime("%d")
-print(kl)
+print(gh)
 
 @app.route("/", methods=("POST", "GET"))
 def welcome():
@@ -34,7 +33,7 @@ def home():
          querystring = {"location":{name},"format":"json","u":"c"}
 
          headers = {
-	"X-RapidAPI-Key": api,
+	"X-RapidAPI-Key": "3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54",
 	"X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com"
 }
 
@@ -69,13 +68,21 @@ def home():
          df = datetime.date.today()
          ky= len(future)+1
          gf=[]
+         gt=[]
+         qk=[]
          for gh in range(1, ky): 
             hy= datetime.timedelta(days=gh)
             gh=hy+ df
             kl= gh.strftime("%d")
+            an= gh.strftime("%B")
+            ag= gh.strftime("%A")
             gf.append(str(kl))
+            gt.append(an)
+            qk.append(ag)
          print(gf)
-         return render_template("search.html", jh=kk, future=future, condition=condition, location=locationstate, date=toon, bot=hj, astronomy=astronomy, loc=hg, atmosphere=atmosphere, wind=wind, gv=gf, mm=hk)
+         print(gt)
+         print(qk)
+         return render_template("search.html", jh=kk, future=future, condition=condition, location=locationstate, date=toon, bot=hj, astronomy=astronomy, loc=hg, atmosphere=atmosphere, wind=wind, gv=gf, mm=hk, er=gt, yu=qk)
       except ConnectionError:
          return redirect(url_for("home"))
     #         # return("error")
@@ -99,7 +106,7 @@ def search():
          querystring = {"location":{name},"format":"json","u":"c"}
 
          headers = {
-	"X-RapidAPI-Key": "3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54",
+	"X-RapidAPI-Key": api,
 	"X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com"
 }
 

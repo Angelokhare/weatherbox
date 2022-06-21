@@ -68,7 +68,7 @@ header {
 
 .wrapper{
   /* max-height: 200px; */
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   display: flex;
   overflow-x: auto;
 }
