@@ -75,7 +75,7 @@ def home():
             gh=hy+ df
             kl= gh.strftime("%d")
             an= gh.strftime("%B")
-            ag= gh.strftime("%A")
+            ag= gh.strftime("%a")
             gf.append(str(kl))
             gt.append(an)
             qk.append(ag)

@@ -75,6 +75,9 @@ header {
 .wrapper::-webkit-scrollbar{
  width: 0;
 }
+.offcanvas-end{
+  width:60%;
+}
 .wrapper .item{
   min-width: 30%;
   /* height: 110px; */
