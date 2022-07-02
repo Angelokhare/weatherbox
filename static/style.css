@@ -491,6 +491,25 @@ body {margin:0px;
       opacity: 90%;
       z-index: -1;}
       #myVideo{display: none;} }
+@media only screen and (min-height:694px) {
+  #myVideo {
+    position: fixed;
+    width: 270%;
+    opacity: 90%;
+  } 
+  #mydancing{
+    width: 120%;
+  }
+      }
+
+@media only screen and (min-height:653px) {
+  #mydancing{display: block;
+    position: fixed;
+  width: 150%;
+  opacity: 90%;
+  z-index: -1;} 
+            }      
+      
 @media only screen and (max-width:846px) {
         /* #view{visibility: visible;} */
         header {visibility: hidden;}
@@ -531,3 +550,10 @@ body {margin:0px;
     /* display: block; */
   }
     }
+    @media only screen and (max-width:380px) {
+    .fer {width: 70%;}
+    }
+
+@media only screen and (max-width:316px) {
+      .fer {width: 65%;}
+      }    
