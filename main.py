@@ -13,15 +13,15 @@ gh=hj+ df
 kl= gh.strftime("%d")
 print(gh)
 
+# @app.route("/", methods=("POST", "GET"))
+# def welcome():
+#    hj=datetime.datetime.now().strftime("%Y")
+#    if request.method=="POST":
+#       return redirect(url_for("home"))
+#    return render_template("welcome.html", bot=hj)
+
+
 @app.route("/", methods=("POST", "GET"))
-def welcome():
-   hj=datetime.datetime.now().strftime("%Y")
-   if request.method=="POST":
-      return redirect(url_for("home"))
-   return render_template("welcome.html", bot=hj)
-
-
-@app.route("/welcome", methods=("POST", "GET"))
 def home():
     if request.method=="POST":
       try:
